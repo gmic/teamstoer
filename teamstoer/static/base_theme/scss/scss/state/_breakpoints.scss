@@ -1,0 +1,84 @@
+/****
+ * TABLE OF CONTENTS
+ *
+ * GENERAL MEDIA QUERIES 
+ *    - (max-width: 767px) or context 'small'
+ *
+ ****/
+ 
+/*----------------------------------------*\
+  #(max-width: 767px) or context 'small'
+\*----------------------------------------*/
+ 
+@include small {
+  
+  /** Content Containers **/
+  #content {
+	  .container {
+		  padding-left: 0px;
+		  padding-right: 0px;
+	  }
+  }
+  
+  /** All Rows **/
+  .row {
+	  margin-left: 0px !important;
+	  margin-right: 0px !important;
+  }
+  
+  /** Nav Search Option **/
+  #search-option {
+		display: block !important;
+		color: #fff;
+		@include abs-pos(0px, 0px, auto, auto);
+		padding-right: 20px;
+		padding-top: 10px;
+		.glyphicon-search {
+			color: #fff;
+		}
+	}
+  
+  /** Specific Rows **/   
+  #header, 
+  #banner, 
+  .main-nav {
+	  .row {
+		  padding: 0px 0px;
+	  }
+  }
+  
+  /** Main Navbar **/
+  .navbar-collapse {
+	  background-color: #5a79b0;
+	  box-shadow: 4px 5px 3px -3px rgba(0,0,0,0.5),-4px 5px 3px -3px rgba(0,0,0,0.5);
+	  li {
+		  border-bottom: 1px solid #8da0c8;
+		  padding-top: 0px;
+		  padding-bottom: 0px;
+		  a {
+            padding-top: 7px !important;
+            padding-bottom: 7px !important;
+            display: block;
+		  }
+		  &:hover {
+			  background: $red !important;
+		  }
+	  }
+  }
+  
+  /** Main Navbar **/
+  .navbar-nav {
+	  margin-bottom: 0px;
+	  margin-top: 0px;
+  }
+  
+  /** Main Navbar **/
+  .navbar-toggle {
+	  float: left;
+	  border: 0px;
+	  padding: 5px 10px 5px 20px;
+	  &:hover, &:focus {
+		  background: none !important;
+	  }
+  }
+}  

@@ -1,0 +1,144 @@
+{% load teamstoer_tags static wagtailuserbar staticfiles fontawesome %}<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static "base_theme/favicon.ico" %}">
+    <title>{% block site_title %}teamstoer{% endblock site_title %}</title>
+    {% block extra_head_top %}{% endblock extra_head_top %}
+    {% block head_css %}
+	<link href="{% static "base_theme/scss/compiled_css/all.min.css" %}" rel="stylesheet" type="text/css">
+        {% block font_awesome %}
+            {% fontawesome_stylesheet %}
+        {% endblock font_awesome %}
+    {% endblock head_css %}
+    {% block fast_fonts %}
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+    {% endblock fast_fonts %}
+    {% block extra_head_bottom %}{% endblock extra_head_bottom %}
+</head>
+<body class="{% block body_class %}no-cls{% endblock body_class %}" id="{% block body_id %}no-id{% endblock body_id%}">
+  <!--[if lte IE 9]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser.
+      Please <a href="http://browsehappy.com/">upgrade your browser</a>
+      to improve your experience.
+      </p>
+  <![endif]-->
+{% wagtailuserbar %}
+{% block header_wrapper %}{% block header %}
+	{% get_site_root as site_root %}
+	{% top_menu parent=site_root calling_page=self %}
+{% block banner_wrapper %}{% endblock banner_wrapper %}
+{% block main_nav_wrapper %}{% endblock main_nav_wrapper %}
+{% block breadcrumb_wrapper %}{% endblock breadcrumb_wrapper %}
+{% endblock header %}{% endblock header_wrapper %}
+{% block content_wrapper %}
+<main id="content" role="main">
+
+    {% block content %}
+		<h1 class="visuallyhidden">Main Content Title</h1>
+		<div class="container">
+		    <div class="row">
+		    {% block inner_content %}
+		        <div class="col-md-9">
+		        <h1>Main Content Title</h1>
+		            <section id="part-one">
+		            <header class="visuallyhidden">A Main Section</header>
+		            <h3>A Main Section</h3>
+		            <div class="alert alert-success" role="alert">
+		                <p>This responsive front-end boilerplate includes:</p>
+			              <p><ul class="bullet-list">
+				                <li>Twitter Bootstrap 3</li>
+				                <li>HTML5 Boilerplate</li>
+				                <li>HTML5/CSS3</li>
+				                <li>SASS/SCSS</li>
+				                <li>jQuery</li>
+			                  <li>Modernizer.js</li>
+			                  <li>Respond.js</li>
+			              </ul></p>
+		                <p>Below are just a few style examples (i.e. headers, etc.), but for a full Bootstrap styleguide visit <a href="http://getbootstrap.com/">http://getbootstrap.com</a></p>
+		                <p>Also, for the official Wharton styleguide visit <a href="http://standards.wharton.upenn.edu/">http://standards.wharton.upenn.edu/</a></p>
+		            </div>
+		            <p><b>Now, Ahab and his three mates formed what may be called the first table in the Pequod's cabin</b>.
+			              After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some
+		                hurried order by the pallid steward. And then the three harpooneers were bidden to the feast, they being its residuary legatees.
+		                <ul class="numbered-list">
+				                <li>Item 1</li>
+				                <li>Item 2</li>
+				                <li>Item 3</li>
+				                <li>Item 4</li>
+				                <li>Item 5</li>
+			                  <li>Item 6</li>
+			                  <li>Item 7</li>
+			              </ul>
+		                They made a sort of temporary servants' <a href="#">this is a link - you can click me</a>. In strange contrast to the...
+		          </p>
+		          <p>Now, Ahab and his three mates formed what may be called the first table in the Pequod's cabin. After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some hurried order
+		             by the pallid steward. And then the three harpooneers were bidden to the feast, they being its residuary legatees. They made a sort of temporary servants' hall of the high and mighty cabin. In strange contrast to the
+		          </p>
+		              <h1>Heading 1</h1>
+		              <h2>Heading 2</h2>
+		              <h3>Heading 3</h3>
+		              <h4>Heading 4</h4>
+		              <h5>Heading 5</h5>
+		              <h6>Heading 6</h6>
+		          <p>
+		              <blockquote>"Three mates formed what may be called the first table in the Pequod's cabin. After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some hurried order by
+		                  thepallid steward."
+		              </blockquote>
+		          </p>
+		          </section><!--/ end part one -->
+		          <section id="part-two">
+		              <header class="visuallyhidden">A Main Section</header>
+		              <h3>A Main Section</h3>
+		              <article>
+		                  <h5>Article Post One</h5>
+		                  <p>Now, Ahab and his three mates formed what may be called the first table in the Pequod's cabin. After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some hurried order by the pallid
+			                   steward. And then the three harpooneers were bidden to the feast, they being its residuary legatees.They made a sort of temporary servants' hall of the high and mighty cabin. In strange contrast to the...
+		                  </p>
+		              </article>
+		              <article>
+		                  <h5>Article Post Two</h5>
+		                  <p>Now, Ahab and his three mates formed what may be called the first table in the Pequod's cabin. After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some hurried
+		                     order by the pallid steward. And then the three harpooneers were bidden to the feast, they being its residuary legatees. They made a sort of temporary servants' hall of the high and mighty cabin. In strange contrast to the
+		                  </p>
+		              </article>
+		          </section><!--/ end part two -->
+		        </div><!-- end col-md-9 -->
+		    {% endblock inner_content %}
+		    </div><!--/ end row -->
+		</div><!--/ end container -->
+   {% endblock content %}
+ </main><!--/ end main content -->
+ {% endblock content_wrapper %}
+
+{% block footer_wrapper %}
+<footer id="footer">
+    {% block footer %}
+    <div class="container">
+	      <div class="row copyright">
+            <div class="col-md-12">
+	          <p>&copy; {% now "Y" %} <a href="http://www.teamstoer.nl/">teamstoer.nl</a></p>
+	        </div><!--/ end row copyright -->
+	      </div><!--/ end col-md-12 -->
+    </div><!--/ end container -->
+	{% endblock footer %}
+</footer><!--/ end footer -->
+{% endblock footer_wrapper %}
+
+{% block footer_js %}
+    <!-- Core JS
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{% static "base_theme/js/all.min.js" %}"></script>
+{% endblock footer_js %}
+{% block extra_footer_js %}{% endblock extra_footer_js %}
+</body>
+</html>

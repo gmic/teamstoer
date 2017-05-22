@@ -1,0 +1,45 @@
+/*****
+ * TABLE OF CONTENTS
+ *
+ * JUMBOTRON
+ *   - Image
+ *   - Fonts
+ *
+ *****/
+
+/*------------------------------------*\
+    #Image
+\*------------------------------------*/
+
+.jumbotron {
+  background-size: cover;
+}
+
+/*------------------------------------*\
+    #Fonts
+\*------------------------------------*/
+
+.jumbotron-dark {
+  background-color: darkgray;
+  h2 {
+	font-size: 2.7em;
+    color: $offWhite;
+  }
+  p {
+    color: $offWhite;
+  }
+}
+
+.jumbotron-light {
+  background-color: $offWhite;
+}
+
+.jumbotron {
+  min-height: 100px;
+    @include large {
+      min-height: 400px;
+    }
+    @include small {
+      min-height: 200px;
+    }
+}

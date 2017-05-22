@@ -1,0 +1,426 @@
+/*****
+ * TABLE OF CONTENTS
+ *
+ * GLOBAL SETTINGS
+ *   - body, html
+ *   - paragraphs
+ *   - lists
+ *   - headers
+ *   - links
+ *   - strong
+ *   - blockquote
+ *   - textshadow
+ *   - horizontal ruler
+ *   - media
+ *   - fieldset
+ *   - textarea
+ *   - helper classes
+ *   - clearfix
+ *   - search hide
+ *   - btn
+ *   - social icons
+ * BOOTSTRAP OVERRIDES
+ *   - breakpoint
+ *   - support-ie10-width
+ *   - padding
+ *
+ *****/
+ 
+ /*------------------------------------*\
+    #BODY, HTML
+\*------------------------------------*/
+
+body {
+	margin-top: 50px;
+}
+	
+body, 
+html {
+  font-family: $roma;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*------------------------------------*\
+    #PARAGRAPHS
+\*------------------------------------*/
+
+.text_styles {
+	font-family: $roma;
+	word-wrap: break-word;
+	@include smoothing;
+	@include font-size(19px);
+}
+   
+p {
+    @extend .text_styles;
+	@include font-size(19px);
+	line-height: 1.5em;
+	margin: 0 0 1.5em 0;
+}
+
+/*------------------------------------*\
+  #LISTS
+\*------------------------------------*/
+
+li {
+	@extend .text_styles;
+	list-style-type: none;
+	color: $gray;
+	a {
+		@extend .text_styles;
+	}
+}
+
+ol {
+	@extend .text_styles;
+	&.bullet-list {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		li {
+			list-style-type: disc;
+		}
+	}
+	&.numbered-list {
+		li {
+			list-style-type: decimal;
+		}
+	}
+}
+
+ul {
+	&.bullet-list {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		li {
+			list-style-type: disc;
+		}
+	}
+	&.numbered-list {
+		li {
+			list-style-type: decimal;
+		}
+	}
+}
+
+/*------------------------------------*\
+  #HEADERS
+\*------------------------------------*/
+   
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	 margin-bottom: 20px;
+	 word-wrap: break-word;
+	 font-weight: normal; 
+	 line-height: 1.1;
+	 @include smoothing;
+}
+
+h6 {
+	text-transform: uppercase;
+}
+
+/*------------------------------------*\
+  #LINKS
+\*------------------------------------*/
+
+a {
+	font-family: $roma;
+	outline: 0;
+	&:hover, &:focus {
+		text-decoration: none;
+		color: #df524e;
+		outline: 0;
+	}
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  margin-bottom: 20px;
+	word-wrap: break-word;
+	font-weight: normal; 
+	line-height: 1.1;
+}
+
+/*------------------------------------*\
+  #STRONG
+\*------------------------------------*/
+
+strong, b {
+	font-family: $roma;
+	@include smoothing;
+}
+
+/*------------------------------------*\
+  #BLOCKQUOTE
+\*------------------------------------*/
+   
+blockquote {
+	font-family: $roma;
+	background-color: #eee;
+	@include border-radius(4px);
+	padding: 25px;
+	color: $gray;
+	font-style: italic;
+	@include smoothing;
+}
+
+/*------------------------------------*\
+  #TEXT-SHADOW
+\*------------------------------------*/
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*------------------------------------*\
+  #HORIZONTAL RULE BAR
+\*------------------------------------*/
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*------------------------------------*\
+  #MEDIA
+\*------------------------------------*/
+
+audio,
+canvas,
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/*------------------------------------*\
+  #FIELDSET
+\*------------------------------------*/
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*------------------------------------*\
+  #TEXTAREA
+\*------------------------------------*/
+
+textarea {
+  resize: vertical;
+}
+
+/*------------------------------------*\
+  #BROWSE HAPPY
+\*------------------------------------*/
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/*------------------------------------*\
+  #HELPER CLASSES
+\*------------------------------------*/
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  &.focusable:active,
+  &.focusable:focus {
+		clip: auto;
+	  height: auto;
+	  margin: 0;
+	  overflow: visible;
+	  position: static;
+	  width: auto;
+  }
+}
+
+.mx-1 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/*------------------------------------*\
+  #CLEARFIX
+\*------------------------------------*/
+ 
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/*------------------------------------*\
+  #BREAKPOINTS (bootstrap overrides)
+\*------------------------------------*/
+
+@media (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 992px;
+  }
+  .mx-md-3 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 992px;
+  }
+} 
+@media (min-width: 1470px) {
+  .container {
+    width: 992px;
+  }
+}
+
+/*------------------------------------*\
+  #IE10 WIDTH SUPPORT
+\*------------------------------------*/
+
+/* For: http://getbootstrap.com/getting-started/#support-ie10-width */
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+
+/*-------------------------------------*\
+  #ROW PADDING (bootstrap overrides)
+\*-------------------------------------*/
+
+@include x-large {
+	#header, 
+	#banner,
+	#nav-top, 
+	#breadcrumb,
+	.main-nav,
+	#footer,
+	section,
+	#view-more {
+		.row {
+			padding: 0px 115px;
+		}
+	}
+}
+
+/*-------------------------------------*\
+  #SEARCH HIDE
+\*-------------------------------------*/
+
+#search,
+.main-nav #search {
+	display: none;
+}
+
+/*-------------------------------------*\
+  #OVERRIDE BOOTSTRAP BUTTON
+\*-------------------------------------*/
+
+main#content {
+    .btn {
+        &:hover,
+        &:active,
+        &:focus {
+            @include box-shadow(0px, 0px, 0px, 0px, none);
+        }
+    }
+}
+
+/*-------------------------------------*\
+  #SOCIAL ICONS
+\*-------------------------------------*/
+
+.facebook-icon,
+.flickr-icon,
+.googleplus-icon,
+.twitter-icon,
+.youtube-icon{
+	background: url('../../../base_theme/img/social/social_sprite.png') no-repeat;
+	width: 29px;
+	height: 29px;
+}
+
+.facebook-icon {
+	background-position: -11px -12px ;
+}
+
+.flickr-icon{
+	background-position: -60px -13px ;
+}
+
+.googleplus-icon{
+	background-position: -111px -13px ;
+}
+
+.twitter-icon{
+	background-position: -160px -13px ;
+}
+
+.youtube-icon{
+	background-position: -212px -12px ;
+}
+
+/*------------------------------------------*\
+  #CONTAINER PADDING (bootstrap overrides)
+\*-------------------------------------------*/
+   
+//main#content .container {
+//  padding: 0px 40px;
+//    @include x-large {
+//      padding: 0 115px;
+//    }
+//    @include small {
+//      padding: 0px 10px;
+//    }
+//}
+
+footer {
+	padding-top: 100px;
+}

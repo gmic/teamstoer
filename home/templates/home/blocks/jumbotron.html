@@ -1,0 +1,7 @@
+{% load wagtailimages_tags teamstoer_tags %}
+
+{% image value.image width-800 as tmp_image %}
+
+<div class="jumbotron jumbotron-dark" style="background-image:url({{ tmp_image.url }});" isrender="true">
+    {{ value.body }}
+</div>

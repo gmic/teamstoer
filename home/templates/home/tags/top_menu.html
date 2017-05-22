@@ -1,0 +1,33 @@
+{# see: https://github.com/wagtail/wagtaildemo/blob/master/demo/templates/demo/tags/top_menu.html #}
+{% load teamstoer_tags wagtailcore_tags static%}
+{% get_site_root as site_root %}
+
+{# Implementation of bootstrap theme dropdown menu - shows top level links and their children #}
+<div role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        {# Link to home page #}
+        <a href="{% pageurl site_root %}" class="navbar-brand navbar-center" title="{{ site_root.title }}" data-placement="bottom">
+            <img id="banner__logo" src="{% static "base_theme/img/logo/LogoKM.png" %}" alt="teamstoer">
+        </a>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+            {% for menuitem in menuitems %}
+                <li class="{% if menuitem.active %} active{% endif %}">
+                    <a href="{% pageurl menuitem %}">{{ menuitem.title }}</a>
+                </li>
+            {% endfor %}
+                <li class="fb">
+                    <a class="" href="http://facebook.com/teamstoer"><div class="facebook-icon"></div></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

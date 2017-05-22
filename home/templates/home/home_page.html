@@ -1,0 +1,23 @@
+{% extends "teamstoer/base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% for block in page.body %}
+        {% if block.block_type == 'jumbotron' %}
+            <div class="row">
+                <div class="col-xs-12">
+            {{ block.value }}
+                </div>
+            </div>
+        {% else %}
+            <div class="block-{{ block.block_type }}">
+                {% include_block block %}
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}

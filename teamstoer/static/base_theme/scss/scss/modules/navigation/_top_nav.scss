@@ -1,0 +1,76 @@
+/**
+ * TABLE OF CONTENTS
+ *
+ * TOP-NAV
+ *    - blocks, container
+ *    - dropdown menu
+ *    - top-nav leftbar
+ *    - right block
+ *    - top-nav search option
+ */
+
+/*------------------------------------*\
+    #CONTAINER
+\*------------------------------------*/
+
+#top-nav {
+	.container {
+		background-color: #fff;
+		}
+}
+
+/*------------------------------------*\
+    #DROPDOWN MENU
+\*------------------------------------*/
+
+#top-nav {
+	.dropdown-menu {
+		background-color: $gray;
+		li a {
+			&:hover, &:focus {
+				background-color: #999;
+				color: #fff;
+			}
+		}
+	}
+	.dropdown-menu > li > a {
+			color: #b4b4b4;
+	}
+}
+
+/*------------------------------------*\
+    #CENTER NAVBAR BRAND
+\*------------------------------------*/
+
+.navbar-center {
+	position: absolute;
+	width: 300px;
+	height: auto;
+	top: 0;
+	text-align: center;
+	margin: auto;
+	padding: 0px;
+}
+
+.navbar-brand {
+  width: 80%;
+  max-width: 400px;
+}
+
+@media (min-width: 768px) {
+	.navbar-center {
+		width: 100%;
+		padding: 20px;
+	}
+  .navbar-brand {
+    width: 100%;
+    max-width: 1020px;
+    padding-right: 35px;
+  }
+	.navbar-nav {
+		margin-top:	130px;
+	}
+	body {
+		margin-top:180px;
+	}
+}

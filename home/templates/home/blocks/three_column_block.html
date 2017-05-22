@@ -1,0 +1,13 @@
+<div class="row {{ self.background }} mx-1 mx-md-3">
+
+      <div class="col-md-4">
+           {% include "teamstoer/includes/sf_blocks.html" with blocks=self.left_column only %}
+      </div>
+      <div class="col-md-4">
+           {% include "teamstoer/includes/sf_blocks.html" with blocks=self.center_column only %}
+     </div>
+      <div class="col-md-4">
+           {% include "teamstoer/includes/sf_blocks.html" with blocks=self.right_column only %}
+     </div>
+
+</div>

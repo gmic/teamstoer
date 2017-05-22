@@ -1,0 +1,14 @@
+{% extends "teamstoer/base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-event-page{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <h2>{{ page.date }}</h2>
+        {{ page.intro | richtext }}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,83 @@
+/*****
+ * TABLE OF CONTENTS
+ *
+ * BREADCRUMB
+ *   - Container
+ *   - Lists
+ *   - Links
+ *   - State
+ *
+ *****/
+ 
+/*------------------------------------*\
+    #Container
+\*------------------------------------*/
+
+#breadcrumb {
+	.container {
+	}
+	.breadcrumb {
+		background-color: #fff;
+		@include font-size(19px);
+	}
+	@include small {
+	  display: none;
+	}
+}
+
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+
+#breadcrumb {
+	li {
+		font-family: $helv;
+	}
+	ol li:first-child {
+		text-transform: uppercase;
+	}
+	.breadcrumb > li {
+	  letter-spacing: .15em;
+  }
+	.breadcrumb > li+li:before {
+		color: #a5a5a5;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		padding-right: 10px;
+		@include fawesome("\f054");
+        @include font-size(9px);
+        top: -2px;
+	}
+}
+
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+
+#breadcrumb {
+	a {
+		color: #aaa;
+		&:hover, &:focus {
+			color: $red;
+		}
+	}
+	ol li:first-child a {
+		font-family: $pal;
+		@include smoothing;
+	}
+}
+
+/*------------------------------------*\
+    #STATE
+\*------------------------------------*/
+
+.breadcrumb > .active {
+	color: #2d2d2d;
+	letter-spacing: 0em;
+}
+
+#breadcrumb .active {
+  color: #2d2d2d;
+  letter-spacing: 0em;
+  @include font-size(13px);
+}
