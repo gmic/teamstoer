@@ -20,6 +20,8 @@ Tech:
 
 # Running gulp
 
+npm install --global gulp-cli
+
 cd teamstoer/static/base_theme
 npm install
 gulp

@@ -1,0 +1,48 @@
+
+.fa {
+    font-size: 30px;
+}
+
+.fa:hover {
+    color: #fff;
+}
+
+.fa-facebook, .fa-facebook-official {
+    color: #3b5998;
+}
+
+.fa-twitter {
+    color: #00a0d1;
+}
+
+.fa-instagram {
+    color: #4E433C;
+}
+
+.fa-pinterest {
+    color: #910101;
+}
+
+.fa-vimeo {
+    color: #44bbff;
+}
+
+.fa-tumblr {
+    color: #34526f;
+}
+
+.fa-youtube {
+    color: #c4302b;
+}
+
+.fa-linkedin {
+    color: #4875B4;
+}
+
+.fa-google-plus {
+    color: #C63D2D;
+}
+
+.fa-foursquare {
+    color: #8FD400;
+}
