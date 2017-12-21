@@ -1,22 +1,6 @@
 # teamstoer
 
-teamstoer.nl website
-
-# TODO
-
-Design:
-
-- Event layout: using Streamfield block with events
-- Hide header when scrolling
-
-
-Tech:
-
-- Backup website content **
-- Build js with gulpfile
-- Restore content in dev env
-- Use video plugin
-- Use mechanisms from ansible-multi-django (multi app)
+http://www.teamstoer.nl/ website
 
 # Running gulp
 
@@ -29,9 +13,10 @@ gulp
 
 # Getting started
 
-Install postgress.
+* Install python
+* Install postgres
 
-Create the user and database in postgress:
+Create the user and database in postgres:
 
     createuser --pwprompt teamstoer-dev
     createdb -Oteamstoer-dev -Eutf8 teamstoer-dev
