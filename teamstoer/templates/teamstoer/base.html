@@ -17,7 +17,7 @@
         {% block font_awesome %}
             {% fontawesome_stylesheet %}
         {% endblock font_awesome %}
-	<link rel="stylesheet" type="text/css" href="{% static 'css/teamstoer.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/teamstoer.css?v=1' %}">
     {% endblock head_css %}
     {% block fast_fonts %}
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
@@ -149,7 +149,7 @@
 	  gtag('config', 'UA-111427344-1');
 	</script>
 {% endif %}
-	<script src="{% static 'js/teamstoer.js' %}"></script>
+	<script src="{% static 'js/teamstoer.js?v=1' %}"></script>
 
 {% endblock footer_js %}
 {% block extra_footer_js %}{% endblock extra_footer_js %}
