@@ -46,3 +46,41 @@
 .fa-foursquare {
     color: #8FD400;
 }
+
+/* Countdown style */
+
+.light-block {
+    background-color: #eef2f6;
+}
+
+.block-text-padding {
+    padding: 15px 5px 5px 5px;
+}
+
+#widget-counter table {
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+
+#widget-counter table tr td, table tr th {
+    padding: 0 5px;
+}
+
+#widget-counter td div, #widget-numbers td div {
+    padding: 5px 0 10px 0;
+    border: 1px solid #e1e6eb;
+    background-color: #fff;
+    text-align: center;
+    font-family: 'DINNextLTPro-Medium', 'Open Sans', arial, sans-serif;
+    font-size: 28px;
+    line-height: 1.42857143;
+    color: #ef412f;
+}
+
+#widget-counter td div span:last-of-type, #widget-numbers td div span:last-of-type {
+    display: block;
+    font-family: 'Open Sans', arial, sans-serif;
+    font-size: 10px;
+    color: #666;
+    text-transform: uppercase;
+}

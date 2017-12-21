@@ -18,6 +18,15 @@ COLOUR_CHOICES = [
 ]
 
 
+class CountdownBlock(blocks.StaticBlock):
+
+    class Meta:
+        label = "Countdown"
+        admin_text = "Static defined countdown block."
+        template = 'home/blocks/countdown.html'
+        icon = 'user'
+
+
 class OneColumnBlock(blocks.StructBlock):
     background = blocks.ChoiceBlock(choices=COLOUR_CHOICES, default="bg-white")
     center_column = blocks.StreamBlock([
@@ -25,6 +34,7 @@ class OneColumnBlock(blocks.StructBlock):
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
         ('embedded_video', EmbedBlock()),
+        ('countdown', CountdownBlock()),
         # ('google_map', GoogleMapBlock()),
     ], icon='user', label='Center column')
 
@@ -41,6 +51,7 @@ class TwoColumnBlock(blocks.StructBlock):
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
         ('embedded_video', EmbedBlock()),
+        ('countdown', CountdownBlock()),
         # ('google_map', GoogleMapBlock()),
     ], icon='arrow-left', label='Left column content')
 
@@ -49,6 +60,7 @@ class TwoColumnBlock(blocks.StructBlock):
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
         ('embedded_video', EmbedBlock()),
+        ('countdown', CountdownBlock()),
         # ('google_map', GoogleMapBlock()),
     ], icon='arrow-right', label='Right column content')
 
@@ -65,6 +77,7 @@ class ThreeColumnBlock(blocks.StructBlock):
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
         ('embedded_video', EmbedBlock()),
+        ('countdown', CountdownBlock()),
         # ('google_map', GoogleMapBlock()),
     ], icon='arrow-left', label='Left column content')
 
@@ -73,6 +86,7 @@ class ThreeColumnBlock(blocks.StructBlock):
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
         ('embedded_video', EmbedBlock()),
+        ('countdown', CountdownBlock()),
         # ('google_map', GoogleMapBlock()),
     ], icon='user', label='Center column')
 
@@ -81,6 +95,7 @@ class ThreeColumnBlock(blocks.StructBlock):
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
         ('embedded_video', EmbedBlock()),
+        ('countdown', CountdownBlock()),
         # ('google_map', GoogleMapBlock()),
     ], icon='arrow-right', label='Right column content')
 
